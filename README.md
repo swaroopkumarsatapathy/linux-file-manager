@@ -59,6 +59,7 @@ linux-file-manager/
 ├── file_explorer.cpp      # Main Source Code
 ├── activity_log.txt       # Generated Log File
 └── README.md
+
             # Documentation
 Project Design
 Architecture Overview
@@ -66,7 +67,9 @@ The project follows a simple modular design:
 User Interface Layer: Handles terminal-based user interaction and command input.
 Core Logic Layer: Interprets commands and calls respective file handling functions.
 Logging Module: Records every user action with timestamps for audit purposes.
+
 Flow of Execution
+
 Start Program
    ↓
 Display Current Directory
