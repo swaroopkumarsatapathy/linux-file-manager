@@ -1,57 +1,86 @@
-# Linux File Manager (Terminal-Based File Explorer in C++)
+# 🧭 Smart Linux File Manager with Activity Logger
 
-## 📌 Project Overview
-This project is a **terminal-based File Explorer** developed using **Modern C++** and the `<filesystem>` library.  
-It allows users to **navigate directories, list files, create/delete/copy files, and search files** directly from the console.
-
-This project was developed as part of the **Capstone Project** under **Linux OS & LSP**.
+A terminal-based File Manager developed in **C++17**, enhanced with a **logging feature** that records every user action such as file creation, deletion, copy, search, and directory navigation.  
+The project demonstrates system-level programming in Linux using the modern `<filesystem>` library.
 
 ---
 
-## ✨ Features
+## 🚀 Features
 
-| Command | Description |
-|--------|-------------|
-| `ls` | List files and directories in the current path |
-| `cd <folder>` | Change directory |
-| `cd ..` | Go to parent directory |
-| `create <filename>` | Create a new empty file |
-| `delete <filename>` | Delete a file |
-| `copy <source> <destination>` | Copy a file |
-| `search <keyword>` | Search files by name |
-| `exit` | Exit the application |
+- 📂 List files and directories  
+- 🔁 Change directories  
+- ✨ Create new files  
+- ❌ Delete existing files  
+- 📑 Copy files  
+- 🔍 Search files by name  
+- 🧾 **Activity Logger**: Automatically records every operation in `activity_log.txt` with timestamps  
 
 ---
 
-## 🛠️ Technologies Used
-- Programming Language: **C++ (C++17)**
-- Library: **<filesystem>**
-- Platform: **Linux (Ubuntu / WSL / Any Linux Distro)**
+## ⚙️ Setup and Execution
+
+### 1. Clone the Repository
+```bash
+git clone https://github.com/<your-username>/linux-file-manager.git
+cd linux-file-manager
+
+
+---
+
+🧰 Tech Stack
+Component	Description
+Language	C++ (C++17)
+Libraries	<filesystem>, <fstream>, <sstream>, <ctime>
+Platform	Linux / Ubuntu / macOS (M2 Compatible)
+IDE	Visual Studio Code / g++
+Version Control	Git & GitHub
 
 ---
 
 ## 🚀 How to Run
 
 ```bash
-g++ src/file_explorer.cpp -o explorer -lstdc++fs
+compile the code 
+g++ file_explorer.cpp -o explorer -lstdc++fs
+Run the Application
 ./explorer
 
 
+
 🔮 Future Enhancements
-🗃️ Add folder creation & deletion commands (mkdir, rmdir)
-🕹️ Introduce a menu-based interface for non-command users
-📦 Implement file compression support (.zip/.tar)
-🌐 Add remote directory access via sockets
-🧠 GUI-based version using C++ Qt framework
-
-
+Add folder creation and deletion commands (mkdir, rmdir)
+Introduce a menu-based interface
+Implement file compression (.zip/.tar)
+Develop GUI using Qt framework
+Real-time activity viewer
 
 linux-file-manager/
 │
-├── src/
-│   └── file_explorer.cpp
-│
-├── README.md
-│
-└── screenshots
+├── file_explorer.cpp      # Main Source Code
+├── activity_log.txt       # Generated Log File
+└── README.md
+            # Documentation
+Project Design
+Architecture Overview
+The project follows a simple modular design:
+User Interface Layer: Handles terminal-based user interaction and command input.
+Core Logic Layer: Interprets commands and calls respective file handling functions.
+Logging Module: Records every user action with timestamps for audit purposes.
+Flow of Execution
+Start Program
+   ↓
+Display Current Directory
+   ↓
+User Enters Command
+   ↓
+Command Parsed (using stringstream)
+   ↓
+Perform Operation (list, create, delete, etc.)
+   ↓
+Log Activity into activity_log.txt
+   ↓
+Display Result to User
+   ↓
+Repeat Until Exit
+
 
