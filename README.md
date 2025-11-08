@@ -1,6 +1,6 @@
-# 🧭 Smart Linux File Manager with Activity Logger
+# 🧭 Smart Linux File Explorer with Activity Logger
 
-A terminal-based File Manager developed in **C++17**, enhanced with a **logging feature** that records every user action such as file creation, deletion, copy, search, and directory navigation.  
+A terminal-based File Explorer developed in **C++17**, enhanced with a **logging feature** that records every user action such as file creation, deletion, copy, search, and directory navigation.  
 The project demonstrates system-level programming in Linux using the modern `<filesystem>` library.
 
 ---
@@ -22,7 +22,7 @@ The project demonstrates system-level programming in Linux using the modern `<fi
 ### 1. Clone the Repository
 ```bash
 git clone https://github.com/<your-username>/linux-file-manager.git
-cd linux-file-manager
+cd linux-file-explorer
 
 
 ---
@@ -54,7 +54,7 @@ Implement file compression (.zip/.tar)
 Develop GUI using Qt framework
 Real-time activity viewer
 
-linux-file-manager/
+linux-file-explorer/
 │
 ├── file_explorer.cpp      # Main Source Code
 ├── activity_log.txt       # Generated Log File
