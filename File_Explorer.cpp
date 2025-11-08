@@ -84,7 +84,7 @@ void searchFile(string key) {
 }
 
 int main() {
-    cout << "===== SMART LINUX FILE MANAGER =====\n";
+    cout << "===== SMART LINUX FILE EXPLORER =====\n";
     cout << "Current Directory: " << fs::current_path() << endl;
     logAction("Program started.");
 
